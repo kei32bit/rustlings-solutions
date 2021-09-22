@@ -1,7 +1,6 @@
 // macros4.rs
 // Make me compile! Execute `rustlings hint macros4` for hints :)
 
-// I AM NOT DONE
 
 macro_rules! my_macro {
     () => {
