@@ -38,7 +38,7 @@ impl State {
 
     fn process(&mut self, message: Message) {
         match message {
-            Message::ChangeColor((x,y,z)) => self.change_color((x,y,z)),
+            Message::ChangeColor((x, y, z)) => self.change_color((x, y, z)),
             Message::Quit => self.quit(),
             Message::Echo(str) => self.echo(str),
             Message::Move(point) => self.move_position(point),

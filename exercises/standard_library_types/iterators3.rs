@@ -6,8 +6,6 @@
 //    list_of_results functions.
 // Execute `rustlings hint iterators3` to get some hints!
 
-// I AM NOT DONE
-
 #[derive(Debug, PartialEq, Eq)]
 pub enum DivisionError {
     NotDivisible(NotDivisibleError),
@@ -26,9 +24,12 @@ pub fn divide(a: i32, b: i32) -> Result<i32, DivisionError> {
     if b == 0 {
         Err(DivisionError::DivideByZero)
     } else if a % b == 0 {
-        Ok(a/b)
+        Ok(a / b)
     } else {
-        Err(DivisionError::NotDivisible(NotDivisibleError{dividend:a, divisor:b}))
+        Err(DivisionError::NotDivisible(NotDivisibleError {
+            dividend: a,
+            divisor: b,
+        }))
     }
 }
 

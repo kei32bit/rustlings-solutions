@@ -6,7 +6,7 @@ struct ColorClassicStruct {
     hex: String,
 }
 
-struct ColorTupleStruct(String,String);
+struct ColorTupleStruct(String, String);
 
 #[derive(Debug)]
 struct UnitStruct;
@@ -28,7 +28,7 @@ mod tests {
 
     #[test]
     fn tuple_structs() {
-        let green = ColorTupleStruct("green".to_string(),"#00FF00".to_string());
+        let green = ColorTupleStruct("green".to_string(), "#00FF00".to_string());
 
         assert_eq!(green.0, "green");
         assert_eq!(green.1, "#00FF00");
@@ -36,7 +36,7 @@ mod tests {
 
     #[test]
     fn unit_structs() {
-        let unit_struct = UnitStruct{};
+        let unit_struct = UnitStruct {};
         let message = format!("{:?}s are fun!", unit_struct);
 
         assert_eq!(message, "UnitStructs are fun!");

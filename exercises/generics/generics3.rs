@@ -18,8 +18,10 @@ pub struct ReportCard<T> {
 
 impl<T: std::fmt::Display> ReportCard<T> {
     pub fn print(&self) -> String {
-        format!("{} ({}) - achieved a grade of {}",
-            &self.student_name, &self.student_age, &self.grade)
+        format!(
+            "{} ({}) - achieved a grade of {}",
+            &self.student_name, &self.student_age, &self.grade
+        )
     }
 }
 

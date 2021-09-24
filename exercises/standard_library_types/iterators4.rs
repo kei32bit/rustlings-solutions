@@ -10,8 +10,7 @@ pub fn factorial(num: u64) -> u64 {
     // For an extra challenge, don't use:
     // - recursion
     // Execute `rustlings hint iterators4` for hints.
-    (1..=num).fold(1, |sum, v| sum * v )
-
+    (1..=num).fold(1, |sum, v| sum * v)
 }
 
 #[cfg(test)]

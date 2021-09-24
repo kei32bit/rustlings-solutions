@@ -6,7 +6,7 @@
 // of "waiting..." and the program ends without timing out when running,
 // you've got it :)
 
-use std::sync::{Arc,Mutex};
+use std::sync::{Arc, Mutex};
 use std::thread;
 use std::time::Duration;
 
@@ -15,7 +15,7 @@ struct JobStatus {
 }
 
 fn main() {
-    let status = Arc::new(Mutex::new( JobStatus {jobs_completed: 0 }));
+    let status = Arc::new(Mutex::new(JobStatus { jobs_completed: 0 }));
     let status_shared = status.clone();
     thread::spawn(move || {
         for _ in 0..10 {

@@ -6,6 +6,6 @@
 mod tests {
     #[test]
     fn you_can_assert_eq() {
-        assert_eq!("hoge","hoge");
+        assert_eq!("hoge", "hoge");
     }
 }

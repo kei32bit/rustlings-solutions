@@ -5,8 +5,8 @@
 // Execute `rustlings hint errors5` for hints!
 
 use std::error;
-use std::fmt;
 use std::error::Error;
+use std::fmt;
 
 fn main() -> Result<(), Box<dyn Error>> {
     let pretend_user_input = "42";
@@ -31,7 +31,7 @@ impl PositiveNonzeroInteger {
         match value {
             x if x < 0 => Err(CreationError::Negative),
             x if x == 0 => Err(CreationError::Zero),
-            x => Ok(PositiveNonzeroInteger(x as u64))
+            x => Ok(PositiveNonzeroInteger(x as u64)),
         }
     }
 }
